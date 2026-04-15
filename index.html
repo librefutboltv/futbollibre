@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fútbol Libre HD | Ver Fútbol en Vivo Gratis 2026 - Partidos Online</title>
+<meta name="description" content="Fútbol Libre HD — mira partidos en vivo gratis de Champions League, LaLiga, Premier League, Copa Libertadores y más. Sin registro. Sin pago. En HD.">
+<meta name="keywords" content="futbol libre, ver futbol en vivo, partidos en vivo gratis, champions league en vivo, laliga en vivo, premier league online, copa libertadores gratis, futbol online hd">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Fútbol Libre HD | Ver Fútbol en Vivo Gratis">
+<meta property="og:description" content="Transmisiones en vivo de fútbol gratis. Champions, LaLiga, Premier, Libertadores y más.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#00e87a;
+  --green2:#00b85f;
+  --red:#ff3b3b;
+  --gold:#ffd23f;
+  --bg:#07080f;
+  --bg2:#0c0f1c;
+  --bg3:#111828;
+  --bg4:#18213a;
+  --border:#1e2d48;
+  --text:#e8edf8;
+  --muted:#6a7fa0;
+  --font-head:'Bebas Neue',sans-serif;
+  --font-body:'Barlow',sans-serif;
+  --font-cond:'Barlow Condensed',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;}
+
+/* ========= SCROLLBAR ========= */
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:var(--bg2);}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+
+/* ========= TICKER ========= */
+.ticker{background:var(--green);color:#000;font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:0.5px;padding:7px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-block;animation:tick 35s linear infinite;}
+.ticker-inner span{margin:0 40px;}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ========= NAV ========= */
+nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:62px;position:sticky;top:0;z-index:100;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-ball{width:36px;height:36px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.logo-name{font-family:var(--font-head);font-size:26px;letter-spacing:1px;color:var(--green);line-height:1;}
+.logo-sub{font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:600;}
+.nav-menu{display:flex;gap:2px;align-items:center;}
+.nav-menu a{color:var(--muted);font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;transition:all .2s;letter-spacing:0.3px;}
+.nav-menu a:hover,.nav-menu a.on{color:#fff;background:var(--bg4);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.live-pill{background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:4px;letter-spacing:1px;animation:blink 1.4s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
+.nav-date{font-size:12px;color:var(--muted);font-weight:500;}
+
+/* ========= HERO ========= */
+.hero{background:var(--bg2);border-bottom:1px solid var(--border);padding:40px 24px 36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,232,122,.07) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{max-width:760px;margin:0 auto;text-align:center;}
+.hero-tag{display:inline-block;background:rgba(0,232,122,.12);color:var(--green);font-family:var(--font-cond);font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:4px;margin-bottom:16px;border:1px solid rgba(0,232,122,.2);}
+.hero h1{font-family:var(--font-head);font-size:58px;line-height:.95;color:#fff;margin-bottom:12px;letter-spacing:1px;}
+.hero h1 span{color:var(--green);}
+.hero p{color:var(--muted);font-size:15px;max-width:500px;margin:0 auto 24px;line-height:1.6;}
+.search-wrap{display:flex;max-width:520px;margin:0 auto 20px;background:var(--bg3);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.search-wrap input{flex:1;background:transparent;border:none;padding:13px 18px;color:#fff;font-size:14px;font-family:var(--font-body);outline:none;}
+.search-wrap input::placeholder{color:var(--muted);}
+.search-wrap button{background:var(--green);border:none;padding:12px 22px;color:#000;font-weight:800;font-size:13px;cursor:pointer;font-family:var(--font-cond);letter-spacing:.5px;transition:background .2s;}
+.search-wrap button:hover{background:var(--green2);}
+.hero-stats{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;}
+.hstat{text-align:center;}
+.hstat-num{font-family:var(--font-head);font-size:30px;color:var(--green);}
+.hstat-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;}
+
+/* ========= LEAGUE TABS ========= */
+.tabs-wrap{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:12px 0;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab{white-space:nowrap;background:transparent;border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:700;padding:7px 16px;border-radius:20px;cursor:pointer;transition:all .2s;letter-spacing:.3px;font-family:var(--font-cond);}
+.tab:hover{color:#fff;border-color:var(--bg4);}
+.tab.on{background:var(--green);border-color:var(--green);color:#000;}
+
+/* ========= LAYOUT ========= */
+.page{max-width:1080px;margin:0 auto;padding:0 20px;}
+.grid-main{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:24px 0;}
+@media(max-width:800px){.grid-main{grid-template-columns:1fr;}}
+
+/* ========= SECTION TITLE ========= */
+.sec-title{font-family:var(--font-head);font-size:22px;color:#fff;letter-spacing:.5px;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.sec-title::before{content:'';width:4px;height:22px;background:var(--green);border-radius:2px;display:block;}
+
+/* ========= FEATURED MATCH ========= */
+.featured{background:var(--bg3);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;cursor:pointer;transition:border-color .2s;}
+.featured:hover{border-color:var(--green);}
+.feat-header{background:var(--bg4);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;}
+.feat-comp{font-family:var(--font-cond);font-size:13px;font-weight:700;color:var(--green);letter-spacing:1px;}
+.feat-round{font-size:11px;color:var(--muted);}
+.feat-body{padding:24px 18px 18px;}
+.feat-teams{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.feat-team{text-align:center;flex:1;}
+.crest{width:64px;height:64px;border-radius:50%;background:var(--bg4);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid var(--border);}
+.feat-tname{font-size:15px;font-weight:700;}
+.feat-tsub{font-size:11px;color:var(--muted);}
+.feat-vs{text-align:center;padding:0 10px;}
+.score-big{font-family:var(--font-head);font-size:56px;line-height:1;color:#fff;letter-spacing:2px;}
+.score-big .g{color:var(--green);}
+.live-min{background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:4px;display:inline-block;margin-top:6px;animation:blink 1.4s infinite;letter-spacing:.5px;}
+.feat-time{font-size:12px;color:var(--muted);margin-top:4px;}
+.watch-btn{display:block;width:100%;background:var(--green);color:#000;border:none;border-radius:8px;padding:13px;font-family:var(--font-cond);font-size:16px;font-weight:800;letter-spacing:.5px;cursor:pointer;transition:background .2s;text-align:center;}
+.watch-btn:hover{background:var(--green2);}
+.feat-tags{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+.tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;border:1px solid;}
+.tag.hd{border-color:rgba(0,232,122,.4);color:var(--green);background:rgba(0,232,122,.08);}
+.tag.free{border-color:rgba(255,210,63,.4);color:var(--gold);background:rgba(255,210,63,.08);}
+.tag.multi{border-color:rgba(100,149,255,.4);color:#6495ff;background:rgba(100,149,255,.08);}
+
+/* ========= MATCH GRID ========= */
+.matches-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.mc{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px;cursor:pointer;transition:all .2s;}
+.mc:hover{border-color:var(--green);background:var(--bg4);}
+.mc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.mc-comp{font-family:var(--font-cond);font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.5px;}
+.badge{font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;letter-spacing:.5px;font-family:var(--font-cond);}
+.badge.live{background:var(--red);color:#fff;}
+.badge.soon{background:rgba(100,149,255,.2);color:#6495ff;border:1px solid rgba(100,149,255,.3);}
+.badge.fin{background:rgba(106,127,160,.15);color:var(--muted);border:1px solid var(--border);}
+.mc-teams{display:flex;flex-direction:column;gap:5px;}
+.mc-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;}
+.mc-row .name{display:flex;align-items:center;gap:6px;}
+.mc-row .flag{font-size:15px;line-height:1;}
+.mc-score{font-size:14px;font-weight:800;color:#fff;}
+.mc-score.win{color:var(--green);}
+.mc-sep{text-align:center;font-size:10px;color:var(--muted);margin:2px 0;}
+.mc-foot{margin-top:8px;display:flex;align-items:center;justify-content:space-between;}
+.mc-time{font-size:11px;color:var(--green);font-weight:700;}
+.mc-time.ended{color:var(--muted);}
+.mc-chan{font-size:10px;color:var(--muted);}
+
+/* ========= SIDEBAR ========= */
+.sidebar{}
+.side-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;}
+.side-title{font-family:var(--font-cond);font-size:15px;font-weight:800;color:#fff;letter-spacing:.5px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.side-title .dot{width:7px;height:7px;background:var(--green);border-radius:50%;}
+
+/* standings */
+.stand-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.stand-row:last-child{border:none;}
+.stand-pos{width:18px;text-align:center;color:var(--muted);font-weight:700;font-family:var(--font-cond);}
+.stand-pos.top{color:var(--green);}
+.stand-pos.rel{color:#6495ff;}
+.stand-flag{font-size:15px;}
+.stand-name{flex:1;font-weight:600;}
+.stand-pts{font-family:var(--font-cond);font-weight:800;font-size:14px;color:var(--green);}
+.stand-detail{font-size:11px;color:var(--muted);}
+
+/* top scorers */
+.scorer-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+.scorer-row:last-child{border:none;}
+.scorer-num{width:20px;font-family:var(--font-head);font-size:18px;color:var(--green);}
+.scorer-avatar{width:34px;height:34px;border-radius:50%;background:var(--bg4);display:flex;align-items:center;justify-content:center;font-size:16px;border:1px solid var(--border);}
+.scorer-info{flex:1;}
+.scorer-name{font-size:13px;font-weight:700;}
+.scorer-team{font-size:11px;color:var(--muted);}
+.scorer-goals{font-family:var(--font-head);font-size:22px;color:var(--green);line-height:1;}
+
+/* news feed */
+.news-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer;}
+.news-item:last-child{border:none;}
+.news-item:hover .news-title{color:var(--green);}
+.news-thumb{width:60px;height:50px;background:var(--bg4);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.news-title{font-size:12px;font-weight:600;line-height:1.4;margin-bottom:4px;transition:color .2s;}
+.news-meta{font-size:10px;color:var(--muted);}
+.news-new{display:inline-block;background:rgba(0,232,122,.15);color:var(--green);font-size:9px;font-weight:800;padding:1px 5px;border-radius:3px;margin-right:4px;letter-spacing:.5px;}
+
+/* ========= FULL WIDTH SECTION ========= */
+.full-section{padding:24px 0;}
+.leagues-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.league-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .2s;}
+.league-card:hover{border-color:var(--green);transform:translateY(-2px);}
+.league-icon{font-size:28px;margin-bottom:8px;}
+.league-name{font-family:var(--font-cond);font-size:14px;font-weight:700;color:#fff;margin-bottom:2px;}
+.league-count{font-size:11px;color:var(--muted);}
+
+/* ========= HOW TO WATCH ========= */
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px;}
+.how-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.how-num{font-family:var(--font-head);font-size:42px;color:rgba(0,232,122,.2);line-height:1;margin-bottom:8px;}
+.how-title{font-weight:700;font-size:14px;color:#fff;margin-bottom:6px;}
+.how-text{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* ========= FAQ ========= */
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+.faq-item{background:var(--bg3);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.faq-q{padding:14px 16px;font-weight:600;font-size:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q:hover{color:var(--green);}
+.faq-arrow{color:var(--muted);font-size:16px;transition:transform .3s;}
+.faq-a{padding:0 16px;font-size:13px;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:200px;padding:0 16px 14px;}
+.faq-item.open .faq-arrow{transform:rotate(90deg);}
+
+/* ========= ABOUT / DISCLAIMER ========= */
+.about-box{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:24px;margin:24px 0;}
+.about-box h2{font-family:var(--font-head);font-size:24px;color:var(--green);margin-bottom:10px;letter-spacing:.5px;}
+.about-box p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:10px;}
+.about-box p:last-child{margin:0;}
+.about-box strong{color:var(--text);}
+
+/* ========= FOOTER ========= */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:30px 24px 20px;}
+.footer-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:24px;}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr 1fr;}}
+.footer-brand .logo-name{margin-bottom:8px;display:block;}
+.footer-brand p{font-size:12px;color:var(--muted);line-height:1.7;max-width:240px;}
+.footer-col h4{font-family:var(--font-cond);font-size:14px;font-weight:800;color:#fff;letter-spacing:.5px;margin-bottom:10px;}
+.footer-col a{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;transition:color .2s;}
+.footer-col a:hover{color:var(--green);}
+.footer-bottom{max-width:1080px;margin:0 auto;border-top:1px solid var(--border);padding-top:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:10px;}
+.footer-bottom p{font-size:11px;color:var(--muted);}
+.footer-disc-text{font-size:11px;color:rgba(106,127,160,.6);max-width:1080px;margin:12px auto 0;line-height:1.7;text-align:center;}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:600px){
+  .hero h1{font-size:38px;}
+  .matches-grid{grid-template-columns:1fr;}
+  nav .nav-menu{display:none;}
+  .score-big{font-size:42px;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>⚽ Real Madrid 2-1 Bayern Munich · 67' EN VIVO</span>
+    <span>⚽ Barcelona 3-1 Atlético Madrid · 55' EN VIVO</span>
+    <span>⚽ Liverpool 1-2 Manchester City · 71' EN VIVO</span>
+    <span>⚽ PSG 0-0 Arsenal · 34' EN VIVO</span>
+    <span>🏆 Champions League Semifinales — HOY</span>
+    <span>⚽ River Plate vs Boca Juniors · 21:00 hs</span>
+    <span>⚽ Flamengo vs Palmeiras · 19:30 hs</span>
+    <span>⚽ Juventus 2-3 Inter Milan · FINAL</span>
+    <span>⚽ Real Madrid 2-1 Bayern Munich · 67' EN VIVO</span>
+    <span>⚽ Barcelona 3-1 Atlético Madrid · 55' EN VIVO</span>
+    <span>⚽ Liverpool 1-2 Manchester City · 71' EN VIVO</span>
+    <span>⚽ PSG 0-0 Arsenal · 34' EN VIVO</span>
+    <span>🏆 Champions League Semifinales — HOY</span>
+    <span>⚽ River Plate vs Boca Juniors · 21:00 hs</span>
+    <span>⚽ Flamengo vs Palmeiras · 19:30 hs</span>
+    <span>⚽ Juventus 2-3 Inter Milan · FINAL</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-ball">⚽</div>
+    <div>
+      <div class="logo-name">FútbolLibre</div>
+      <div class="logo-sub">HD · GRATIS · EN VIVO</div>
+    </div>
+  </div>
+  <div class="nav-menu">
+    <a href="#" class="on">Inicio</a>
+    <a href="#en-vivo">En Vivo</a>
+    <a href="#partidos">Partidos</a>
+    <a href="#ligas">Ligas</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#como-ver">¿Cómo Ver?</a>
+  </div>
+  <div class="nav-right">
+    <span class="live-pill">● EN VIVO</span>
+    <span class="nav-date" id="live-date"></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">⚡ TRANSMISIÓN GRATUITA · SIN REGISTRO</div>
+    <h1>VER FÚTBOL<br><span>EN VIVO HD</span></h1>
+    <p>Los mejores partidos de Champions League, LaLiga, Premier League, Copa Libertadores y más — totalmente gratis, sin registros y en alta definición.</p>
+    <div class="search-wrap">
+      <input type="text" id="search-in" placeholder="Buscar partido, equipo o liga..." onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">BUSCAR</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num">24+</div><div class="hstat-label">Ligas en Vivo</div></div>
+      <div class="hstat"><div class="hstat-num">HD</div><div class="hstat-label">Calidad de Imagen</div></div>
+      <div class="hstat"><div class="hstat-num">100%</div><div class="hstat-label">Gratuito</div></div>
+      <div class="hstat"><div class="hstat-num">0</div><div class="hstat-label">Registros</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <div class="tab on" onclick="filterTab(this,'all')">Todos los Partidos</div>
+    <div class="tab" onclick="filterTab(this,'ucl')">🏆 Champions League</div>
+    <div class="tab" onclick="filterTab(this,'laliga')">🇪🇸 LaLiga</div>
+    <div class="tab" onclick="filterTab(this,'premier')">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</div>
+    <div class="tab" onclick="filterTab(this,'arg')">🇦🇷 Liga Argentina</div>
+    <div class="tab" onclick="filterTab(this,'lib')">🌎 Copa Libertadores</div>
+    <div class="tab" onclick="filterTab(this,'seriea')">🇮🇹 Serie A</div>
+    <div class="tab" onclick="filterTab(this,'bl')">🇩🇪 Bundesliga</div>
+    <div class="tab" onclick="filterTab(this,'ligue1')">🇫🇷 Ligue 1</div>
+    <div class="tab" onclick="filterTab(this,'mls')">🇺🇸 MLS</div>
+  </div>
+</div>
+
+<!-- MAIN PAGE CONTENT -->
+<div class="page">
+  <div class="grid-main">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <!-- FEATURED MATCH -->
+      <div id="en-vivo"></div>
+      <div style="padding-top:20px">
+        <div class="sec-title">Partido Destacado</div>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="featured">
+          <div class="feat-header">
+            <span class="feat-comp">🏆 UEFA CHAMPIONS LEAGUE — SEMIFINAL</span>
+            <span class="feat-round">Vuelta · Estadio Santiago Bernabéu</span>
+          </div>
+          <div class="feat-body">
+            <div class="feat-teams">
+              <div class="feat-team">
+                <div class="crest">⚪</div>
+                <div class="feat-tname">Real Madrid</div>
+                <div class="feat-tsub">España · Campeón</div>
+              </div>
+              <div class="feat-vs">
+                <div class="score-big"><span class="g">2</span> - <span>1</span></div>
+                <div class="live-min">⚽ EN VIVO · 67'</div>
+                <div class="feat-time">Agg. 3-2</div>
+              </div>
+              <div class="feat-team">
+                <div class="crest">🔴</div>
+                <div class="feat-tname">Bayern Munich</div>
+                <div class="feat-tsub">Alemania · Visitante</div>
+              </div>
+            </div>
+            <button class="watch-btn">▶&nbsp; VER PARTIDO AHORA — GRATIS HD</button>
+            <div class="feat-tags">
+              <span class="tag hd">✓ HD 1080p</span>
+              <span class="tag free">✓ Gratis</span>
+              <span class="tag multi">✓ Múltiples Canales</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- MATCHES TODAY -->
+      <div id="partidos">
+        <div class="sec-title">Partidos de Hoy</div>
+        <div class="matches-grid" id="match-grid">
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="laliga">
+            <div class="mc-top"><span class="mc-comp">🇪🇸 LALIGA SANTANDER</span><span class="badge live">EN VIVO</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🔵🔴</span> FC Barcelona</span><span class="mc-score win">3</span></div>
+              <div class="mc-sep">—</div>
+              <div class="mc-row"><span class="name"><span class="flag">🔴⚪</span> Atlético Madrid</span><span class="mc-score">1</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⚽ 55' Minuto</span><span class="mc-chan">Movistar+</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="premier">
+            <div class="mc-top"><span class="mc-comp">🏴󠁧󠁢󠁥󠁮󠁧󠁿 PREMIER LEAGUE</span><span class="badge live">EN VIVO</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🔴</span> Liverpool FC</span><span class="mc-score">1</span></div>
+              <div class="mc-sep">—</div>
+              <div class="mc-row"><span class="name"><span class="flag">🔵</span> Manchester City</span><span class="mc-score win">2</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⚽ 71' Minuto</span><span class="mc-chan">Sky Sports</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="ucl">
+            <div class="mc-top"><span class="mc-comp">🏆 CHAMPIONS LEAGUE</span><span class="badge live">EN VIVO</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🔵</span> PSG</span><span class="mc-score">0</span></div>
+              <div class="mc-sep">—</div>
+              <div class="mc-row"><span class="name"><span class="flag">🔴</span> Arsenal FC</span><span class="mc-score">0</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⚽ 34' Minuto</span><span class="mc-chan">TUDN</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="seriea">
+            <div class="mc-top"><span class="mc-comp">🇮🇹 SERIE A TIM</span><span class="badge fin">FINAL</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">⚫⚪</span> Juventus</span><span class="mc-score">2</span></div>
+              <div class="mc-sep">—</div>
+              <div class="mc-row"><span class="name"><span class="flag">🔵⚫</span> Inter Milan</span><span class="mc-score win">3</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time ended">✓ Finalizado</span><span class="mc-chan">DAZN</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="arg">
+            <div class="mc-top"><span class="mc-comp">🇦🇷 LIGA PROFESIONAL</span><span class="badge soon">HOY 21:00</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🤍</span> River Plate</span><span class="mc-score">-</span></div>
+              <div class="mc-sep">VS</div>
+              <div class="mc-row"><span class="name"><span class="flag">💛</span> Boca Juniors</span><span class="mc-score">-</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⏰ Empieza en 2h 15m</span><span class="mc-chan">ESPN</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="lib">
+            <div class="mc-top"><span class="mc-comp">🌎 COPA LIBERTADORES</span><span class="badge soon">HOY 19:30</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🔴⚫</span> Flamengo</span><span class="mc-score">-</span></div>
+              <div class="mc-sep">VS</div>
+              <div class="mc-row"><span class="name"><span class="flag">🔵⚪</span> Talleres</span><span class="mc-score">-</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⏰ Empieza en 40m</span><span class="mc-chan">ESPN</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="bl">
+            <div class="mc-top"><span class="mc-comp">🇩🇪 BUNDESLIGA</span><span class="badge soon">HOY 20:30</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">🔴</span> Bayern Munich</span><span class="mc-score">-</span></div>
+              <div class="mc-sep">VS</div>
+              <div class="mc-row"><span class="name"><span class="flag">⚫🟡</span> Borussia Dortmund</span><span class="mc-score">-</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⏰ Empieza en 3h</span><span class="mc-chan">DAZN</span></div>
+          </a>
+
+          <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc" data-cat="laliga">
+            <div class="mc-top"><span class="mc-comp">🇪🇸 LALIGA SANTANDER</span><span class="badge soon">HOY 22:00</span></div>
+            <div class="mc-teams">
+              <div class="mc-row"><span class="name"><span class="flag">⚪🟣</span> Real Valladolid</span><span class="mc-score">-</span></div>
+              <div class="mc-sep">VS</div>
+              <div class="mc-row"><span class="name"><span class="flag">⚽</span> Villarreal CF</span><span class="mc-score">-</span></div>
+            </div>
+            <div class="mc-foot"><span class="mc-time">⏰ Empieza en 4h</span><span class="mc-chan">Movistar+</span></div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- HOW TO WATCH -->
+      <div id="como-ver" class="full-section">
+        <div class="sec-title">¿Cómo Ver los Partidos?</div>
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-num">01</div>
+            <div class="how-title">Elige un Partido</div>
+            <div class="how-text">Busca o navega entre los partidos disponibles en nuestro sitio. Los partidos en vivo están marcados en rojo.</div>
+          </div>
+          <div class="how-card">
+            <div class="how-num">02</div>
+            <div class="how-title">Haz Clic en Ver</div>
+            <div class="how-text">Presiona el botón "Ver Partido". No necesitas registrarte ni pagar nada para acceder al stream.</div>
+          </div>
+          <div class="how-card">
+            <div class="how-num">03</div>
+            <div class="how-title">Elige tu Calidad</div>
+            <div class="how-text">Selecciona la calidad de video: HD 1080p, 720p o menor resolución si tu conexión es lenta.</div>
+          </div>
+          <div class="how-card">
+            <div class="how-num">04</div>
+            <div class="how-title">¡Disfruta el Partido!</div>
+            <div class="how-text">Mira el partido en tu celular, tablet o computadora. 100% gratis, sin interrupciones molestas.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="full-section" style="padding-top:0">
+        <div class="sec-title">Preguntas Frecuentes</div>
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿Es gratis ver fútbol en Fútbol Libre? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Sí, completamente gratis. No necesitas crear una cuenta, ingresar una tarjeta de crédito ni pagar ninguna suscripción. Todos los partidos disponibles en nuestro sitio son accesibles de forma gratuita para todos los usuarios.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿Qué ligas puedo ver en Fútbol Libre HD? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Puedes ver Champions League, LaLiga, Premier League, Copa Libertadores, Liga Argentina, Bundesliga, Serie A italiana, Ligue 1 francesa, MLS, Copa América, Mundial de Clubes y muchas más competiciones internacionales.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿Necesito instalar alguna aplicación? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">No. Fútbol Libre funciona directamente desde tu navegador web, ya sea en celular, tablet o computadora. No necesitas descargar ninguna app. Solo entra al sitio, elige el partido y presiona play.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿En qué calidad se transmiten los partidos? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">La mayoría de los partidos están disponibles en HD (720p y 1080p). También ofrecemos streams en calidad estándar para usuarios con conexiones más lentas. La calidad puede variar según la fuente de transmisión disponible.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿Puedo ver los partidos desde mi celular? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Sí. El sitio está completamente optimizado para dispositivos móviles. Puedes ver fútbol desde Android, iPhone o cualquier dispositivo con acceso a internet y un navegador actualizado.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">¿Qué hago si un stream no funciona? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Cada partido tiene múltiples fuentes disponibles. Si un canal no funciona, simplemente intenta con otra de las opciones disponibles en la misma página del partido. Actualizamos los links constantemente.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT / DISCLAIMER -->
+      <div class="about-box">
+        <h2>Sobre Fútbol Libre HD</h2>
+        <p>Fútbol Libre HD es un sitio web de <strong>carácter informativo y educativo</strong> sobre transmisiones deportivas en internet. Nuestro objetivo es orientar a los aficionados del fútbol sobre cómo acceder a contenidos deportivos disponibles públicamente en la web.</p>
+        <p><strong>Aviso Legal:</strong> No somos propietarios de ningún contenido audiovisual. No alojamos, almacenamos ni distribuimos ningún archivo de video. Todos los enlaces y referencias presentes en este sitio son de dominio público y pertenecen a terceros. Nos limitamos exclusivamente a indexar y enlazar contenidos que ya son públicamente accesibles en internet.</p>
+        <p><strong>Descargo de responsabilidad:</strong> Este sitio no tiene afiliación con ninguna liga, club, federación deportiva ni cadena de televisión. Si eres titular de derechos y tienes alguna consulta, contáctanos para resolver el inconveniente a la brevedad.</p>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- STANDINGS -->
+      <div class="side-card">
+        <div class="side-title"><span class="dot"></span>Tabla Champions League</div>
+        <div class="stand-row"><span class="stand-pos top">1</span><span class="stand-flag">⚪</span><span class="stand-name">Real Madrid</span><span class="stand-detail">6PJ</span><span class="stand-pts">16</span></div>
+        <div class="stand-row"><span class="stand-pos top">2</span><span class="stand-flag">🔵🔴</span><span class="stand-name">Barcelona</span><span class="stand-detail">6PJ</span><span class="stand-pts">14</span></div>
+        <div class="stand-row"><span class="stand-pos top">3</span><span class="stand-flag">🔴</span><span class="stand-name">Liverpool</span><span class="stand-detail">6PJ</span><span class="stand-pts">13</span></div>
+        <div class="stand-row"><span class="stand-pos rel">4</span><span class="stand-flag">🔴</span><span class="stand-name">Arsenal</span><span class="stand-detail">6PJ</span><span class="stand-pts">12</span></div>
+        <div class="stand-row"><span class="stand-pos rel">5</span><span class="stand-flag">🔵</span><span class="stand-name">Man City</span><span class="stand-detail">6PJ</span><span class="stand-pts">11</span></div>
+        <div class="stand-row"><span class="stand-pos">6</span><span class="stand-flag">🔴🔵</span><span class="stand-name">PSG</span><span class="stand-detail">6PJ</span><span class="stand-pts">10</span></div>
+        <div class="stand-row"><span class="stand-pos">7</span><span class="stand-flag">🔴</span><span class="stand-name">Bayern Munich</span><span class="stand-detail">6PJ</span><span class="stand-pts">9</span></div>
+        <div class="stand-row"><span class="stand-pos">8</span><span class="stand-flag">⚫🟡</span><span class="stand-name">Dortmund</span><span class="stand-detail">6PJ</span><span class="stand-pts">8</span></div>
+      </div>
+
+      <!-- TOP SCORERS -->
+      <div class="side-card">
+        <div class="side-title"><span class="dot"></span>Goleadores Champions</div>
+        <div class="scorer-row">
+          <div class="scorer-num">1</div>
+          <div class="scorer-avatar">🇵🇹</div>
+          <div class="scorer-info"><div class="scorer-name">Vinicius Jr.</div><div class="scorer-team">Real Madrid</div></div>
+          <div class="scorer-goals">11</div>
+        </div>
+        <div class="scorer-row">
+          <div class="scorer-num">2</div>
+          <div class="scorer-avatar">🇬🇧</div>
+          <div class="scorer-info"><div class="scorer-name">Harry Kane</div><div class="scorer-team">Bayern Munich</div></div>
+          <div class="scorer-goals">9</div>
+        </div>
+        <div class="scorer-row">
+          <div class="scorer-num">3</div>
+          <div class="scorer-avatar">🇳🇴</div>
+          <div class="scorer-info"><div class="scorer-name">Erling Haaland</div><div class="scorer-team">Man City</div></div>
+          <div class="scorer-goals">8</div>
+        </div>
+        <div class="scorer-row">
+          <div class="scorer-num">4</div>
+          <div class="scorer-avatar">🇫🇷</div>
+          <div class="scorer-info"><div class="scorer-name">Kylian Mbappé</div><div class="scorer-team">Real Madrid</div></div>
+          <div class="scorer-goals">7</div>
+        </div>
+        <div class="scorer-row">
+          <div class="scorer-num">5</div>
+          <div class="scorer-avatar">🇧🇷</div>
+          <div class="scorer-info"><div class="scorer-name">Rodrygo</div><div class="scorer-team">Real Madrid</div></div>
+          <div class="scorer-goals">6</div>
+        </div>
+      </div>
+
+      <!-- NEWS -->
+      <div class="side-card">
+        <div class="side-title"><span class="dot"></span>Últimas Noticias</div>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="news-item">
+          <div class="news-thumb">🏆</div>
+          <div><div class="news-title"><span class="news-new">NUEVO</span>Real Madrid confirma alineación para el partido de esta noche</div><div class="news-meta">Hace 15 min · Champions</div></div>
+        </a>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="news-item">
+          <div class="news-thumb">⚽</div>
+          <div><div class="news-title">Haaland marca hat-trick en la victoria del City frente al Liverpool</div><div class="news-meta">Hace 45 min · Premier</div></div>
+        </a>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="news-item">
+          <div class="news-thumb">🇦🇷</div>
+          <div><div class="news-title">Superclásico: River vs Boca, las claves del partido más esperado del año</div><div class="news-meta">Hace 1h · Liga Argentina</div></div>
+        </a>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="news-item">
+          <div class="news-thumb">🔴🔵</div>
+          <div><div class="news-title">Barcelona golea al Atlético y sigue líder en LaLiga con 5 puntos de ventaja</div><div class="news-meta">Hace 2h · LaLiga</div></div>
+        </a>
+      </div>
+
+      <!-- CTA -->
+      <div class="side-card" style="background:rgba(0,232,122,.07);border-color:rgba(0,232,122,.25);text-align:center;padding:20px;">
+        <div style="font-size:32px;margin-bottom:10px;">📱</div>
+        <div style="font-family:var(--font-cond);font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">Ver en tu Celular</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6;">Fútbol Libre funciona perfectamente en Android e iPhone. No necesitas apps.</div>
+        <a href="https://futbollibre.gg" target="_blank" rel="noopener" style="display:block;background:var(--green);color:#000;font-family:var(--font-cond);font-weight:800;font-size:14px;padding:10px;border-radius:8px;letter-spacing:.5px;">ABRIR SITIO →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LEAGUES SECTION -->
+  <div id="ligas" class="full-section" style="border-top:1px solid var(--border);padding-top:28px;">
+    <div class="sec-title">Todas las Ligas Disponibles</div>
+    <div class="leagues-grid">
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🏆</div><div class="league-name">Champions</div><div class="league-count">8 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇪🇸</div><div class="league-name">LaLiga</div><div class="league-count">5 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div><div class="league-name">Premier League</div><div class="league-count">4 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🌎</div><div class="league-name">Libertadores</div><div class="league-count">6 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇦🇷</div><div class="league-name">Liga Argentina</div><div class="league-count">3 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇮🇹</div><div class="league-name">Serie A</div><div class="league-count">4 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇩🇪</div><div class="league-name">Bundesliga</div><div class="league-count">3 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇫🇷</div><div class="league-name">Ligue 1</div><div class="league-count">3 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇧🇷</div><div class="league-name">Brasileirão</div><div class="league-count">5 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🏆</div><div class="league-name">Copa Sudamericana</div><div class="league-count">4 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🇺🇸</div><div class="league-name">MLS</div><div class="league-count">2 partidos hoy</div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="league-card"><div class="league-icon">🌍</div><div class="league-name">Eliminatorias</div><div class="league-count">Ver todos</div></a>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="resultados" class="full-section" style="border-top:1px solid var(--border);padding-top:28px;">
+    <div class="sec-title">Resultados de Ayer</div>
+    <div class="matches-grid">
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc"><div class="mc-top"><span class="mc-comp">🏆 UCL</span><span class="badge fin">FINAL</span></div><div class="mc-teams"><div class="mc-row"><span class="name"><span class="flag">🔵</span> Chelsea</span><span class="mc-score win">2</span></div><div class="mc-sep">—</div><div class="mc-row"><span class="name"><span class="flag">🔵</span> Inter Milan</span><span class="mc-score">0</span></div></div><div class="mc-foot"><span class="mc-time ended">✓ Finalizado</span></div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc"><div class="mc-top"><span class="mc-comp">🇪🇸 LALIGA</span><span class="badge fin">FINAL</span></div><div class="mc-teams"><div class="mc-row"><span class="name"><span class="flag">⚽</span> Sevilla FC</span><span class="mc-score">1</span></div><div class="mc-sep">—</div><div class="mc-row"><span class="name"><span class="flag">⚽</span> Real Betis</span><span class="mc-score win">2</span></div></div><div class="mc-foot"><span class="mc-time ended">✓ Finalizado</span></div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc"><div class="mc-top"><span class="mc-comp">🇬🇧 PREMIER</span><span class="badge fin">FINAL</span></div><div class="mc-teams"><div class="mc-row"><span class="name"><span class="flag">🔴</span> Man United</span><span class="mc-score">0</span></div><div class="mc-sep">—</div><div class="mc-row"><span class="name"><span class="flag">🔵</span> Chelsea</span><span class="mc-score win">3</span></div></div><div class="mc-foot"><span class="mc-time ended">✓ Finalizado</span></div></a>
+      <a href="https://futbollibre.gg" target="_blank" rel="noopener" class="mc"><div class="mc-top"><span class="mc-comp">🇦🇷 LIGA ARG</span><span class="badge fin">FINAL</span></div><div class="mc-teams"><div class="mc-row"><span class="name"><span class="flag">⭐</span> Racing Club</span><span class="mc-score win">1</span></div><div class="mc-sep">—</div><div class="mc-row"><span class="name"><span class="flag">⚽</span> San Lorenzo</span><span class="mc-score">1</span></div></div><div class="mc-foot"><span class="mc-time ended">✓ Finalizado</span></div></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-name">FútbolLibre</span>
+      <p>Ver fútbol en vivo gratis, sin registros y en HD. Los mejores partidos de todas las ligas del mundo al alcance de tu mano.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Ligas</h4>
+      <a href="https://futbollibre.gg" target="_blank">Champions League</a>
+      <a href="https://futbollibre.gg" target="_blank">LaLiga</a>
+      <a href="https://futbollibre.gg" target="_blank">Premier League</a>
+      <a href="https://futbollibre.gg" target="_blank">Copa Libertadores</a>
+      <a href="https://futbollibre.gg" target="_blank">Serie A</a>
+      <a href="https://futbollibre.gg" target="_blank">Bundesliga</a>
+    </div>
+    <div class="footer-col">
+      <h4>Secciones</h4>
+      <a href="#">Partidos En Vivo</a>
+      <a href="#">Resultados</a>
+      <a href="#">Tabla de Posiciones</a>
+      <a href="#">Goleadores</a>
+      <a href="#">Próximos Partidos</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="#">Acerca de Nosotros</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Aviso Legal</a>
+      <a href="#">Contacto</a>
+      <a href="#">DMCA</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 FútbolLibre HD — Sitio Educativo e Informativo</p>
+    <p>Actualizado: <span id="footer-date"></span></p>
+  </div>
+  <div class="footer-disc-text">
+    <strong>Aviso Legal:</strong> FútbolLibre HD es un sitio de carácter exclusivamente educativo e informativo. No somos propietarios ni distribuidores de ningún contenido multimedia. No alojamos ningún archivo de video en nuestros servidores. Todos los enlaces presentes en este sitio son de dominio público y pertenecen a terceros. Este sitio no tiene ninguna afiliación con UEFA, FIFA, LaLiga, Premier League, AFA ni ninguna otra entidad deportiva oficial.
+  </div>
+</footer>
+
+<script>
+const TARGET = 'https://futbollibre.gg';
+
+function doSearch(){
+  const q = document.getElementById('search-in').value.trim();
+  if(q) window.open(TARGET,'_blank');
+}
+
+function filterTab(el, cat){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#match-grid .mc').forEach(m=>{
+    if(cat==='all'||m.dataset.cat===cat){m.style.display='block';}
+    else{m.style.display='none';}
+  });
+}
+
+function toggleFaq(el){
+  el.classList.toggle('open');
+}
+
+function setDates(){
+  const now = new Date();
+  const opts = {weekday:'long',year:'numeric',month:'long',day:'numeric'};
+  const str = now.toLocaleDateString('es-ES',opts);
+  const el = document.getElementById('live-date');
+  const fd = document.getElementById('footer-date');
+  if(el) el.textContent = str;
+  if(fd) fd.textContent = str;
+}
+setDates();
+
+// Live clock for ticker freshness
+function updateMinutes(){
+  document.querySelectorAll('.mc-time').forEach(el=>{
+    const txt = el.textContent;
+    const m = txt.match(/(\d+)' Minuto/);
+    if(m){
+      let min = parseInt(m[1]);
+      if(min < 90){ min = Math.min(90, min + 1); el.textContent = '⚽ ' + min + '\' Minuto'; }
+    }
+  });
+}
+setInterval(updateMinutes, 45000);
+</script>
+</body>
+</html>
